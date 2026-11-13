@@ -1,6 +1,8 @@
 # Miscellaneous
 *.class
+# Ignore lock files except Flutter application lockfile
 *.lock
+!mobile/pubspec.lock
 *.log
 *.pyc
 *.swp
@@ -117,3 +119,47 @@ app.*.symbols
 !**/ios/**/default.perspectivev3
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
 !/dev/ci/**/Gemfile.lock
+
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+.pytest_cache/
+*.pyc
+
+# Environment secrets
+.env
+.env.*
+!.env.example
+
+# Flutter build files
+**/build/
+
+# APKs
+*.apk
+*.aab
+
+# Allow only distribution APKs in releases
+!releases/*.apk
+# Logs
+*.log
+
+# IDE
+.idea/
+.vscode/
+# Local Python environment
+/Lib/
+/Scripts/
+/Include/
+/pyvenv.cfg
+
+# Local database
+/k2.db
+# Local Flutter debug logs
+mobile/flutter_build_errors.txt
+mobile/flutter_errors.txt
+
+# Invalid placeholder APK
+/releases/K2-Mountain-Companion-v1.0.apk
